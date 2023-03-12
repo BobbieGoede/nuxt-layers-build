@@ -5,7 +5,8 @@
 		"build:local": "LAYER=local nuxt build",
 		"build:remote": "LAYER=remote nuxt build",
 		"dev": "HOST=0.0.0.0 nuxt dev",
-		"dev:multiple": "MULTIPLE=1 LAYER=remote HOST=0.0.0.0 nuxt dev",
+		"dev:multiple": "MULTIPLE=1 LAYER=local HOST=0.0.0.0 nuxt dev",
+		"dev:multiple-remote": "MULTIPLE=1 LAYER=remote HOST=0.0.0.0 nuxt dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare"

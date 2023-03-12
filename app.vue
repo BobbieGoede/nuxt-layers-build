@@ -11,7 +11,7 @@
 const links = [
 	{ path: "/", label: "Home" },
 	{ path: "/page-regular", label: "Regular page" },
-	{ path: "/basic-page", label: "Basic page" },
+	// { path: "/basic-page", label: "Basic page" },
 	{ path: "/page-setup", label: "Page setup" },
 ];
 </script>
