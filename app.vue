@@ -1,10 +1,30 @@
 <template>
-  <div>
-    <NuxtLink v-for="link in links" :key="link" :to="link">{{ link }}</NuxtLink>
-    <NuxtPage />
-  </div>
+	<div>
+		<nav>
+			<NuxtLink v-for="link in links" :key="link.path" :to="link.path">{{ link.label }}</NuxtLink>
+		</nav>
+		<NuxtPage />
+	</div>
 </template>
 
-<script setup>
-const links = ['/', '/regular-page', '/page-setup'];
+<script lang="ts" setup>
+const links = [
+	{ path: "/", label: "Home" },
+	{ path: "/page-regular", label: "Regular page" },
+	{ path: "/page-setup", label: "Page setup" },
+];
 </script>
+
+<style>
+html {
+	font-family: sans-serif;
+}
+nav {
+	display: flex;
+	gap: 0.5rem;
+}
+
+nav a {
+	padding: 0.5em;
+}
+</style>
