@@ -1,13 +1,16 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "HOST=0.0.0.0 nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "nuxt": "^3.2.3"
-  }
+	"private": true,
+	"scripts": {
+		"build": "npm run build:local",
+		"build:local": "LAYER=local nuxt build",
+		"build:remote": "LAYER=remote nuxt build",
+		"dev": "HOST=0.0.0.0 nuxt dev",
+		"dev:multiple": "MULTIPLE=1 LAYER=remote HOST=0.0.0.0 nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"nuxt": "^3.2.3"
+	}
 }
